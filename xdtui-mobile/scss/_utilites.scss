@@ -1,0 +1,101 @@
+// ==================================================
+// Utility classes
+// ==================================================
+
+// Floats
+// --------------------------------------------------
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+// Padding
+// --------------------------------------------------
+
+.padding {
+    padding: $grid-gutter-base;
+}
+
+.padding-top,
+.padding-vertical {
+    padding-top: $grid-gutter-base;
+}
+
+.padding-right,
+.padding-horizontal {
+    padding-right: $grid-gutter-base;
+}
+
+.padding-bottom,
+.padding-vertical {
+    padding-bottom: $grid-gutter-base;
+}
+
+.padding-left,
+.padding-horizontal {
+    padding-left: $grid-gutter-base;
+}
+
+.padding-right-small,
+.padding-horizontal-small {
+    padding-right: $grid-gutter-base / 2;
+}
+
+.padding-left-small,
+.padding-horizontal-small {
+    padding-left: $grid-gutter-base / 2;
+}
+
+// Toggling content
+// --------------------------------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+}
+
+// For Affix plugin
+// --------------------------------------------------
+
+.affix {
+  position: fixed;
+}
+
+// Orange red color
+// --------------------------------------------------
+.color-primary {
+  color: $color-primary;
+}
+
+// Full fill the parent container
+// --------------------------------------------------
+.full-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
