@@ -2,6 +2,34 @@
 // List
 // ==================================================
 
+.list {
+    margin-top: $list-margin-top;
+    color: $color-gray;
+    font-size: $font-size-small;
+    background-color: $color-white;
+
+    &:active {
+        background-color: darken($color-white, 3%);
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .title {
+        color: $color-black;
+        font-size: $font-size-base;
+    }
+
+    .publish-time {
+        font-size: $font-size-small;
+    }
+
+    .work-time {
+        margin-top: $grid-gutter-base / 2;
+    }
+}
+
 .list-link-view {
   margin-top: $list-margin-top;
   background-color: $color-white;

@@ -11,15 +11,26 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 setupWebViewJavascriptBridge(function(bridge) {
-
     var $indexVM = new Vue({
         el: '#index',
         data: {
             city: '定位中...'
         },
         methods: {
-            showCities: function (event) {
+            showCities: function () {
                 bridge.callHandler('showCities');
+            },
+            findFarmWork: function () {
+                bridge.callHandler('findFarmWork');
+            },
+            findFarmMachinery: function () {
+                bridge.callHandler('findFarmMachinery');
+            },
+            workGuide: function () {
+                bridge.callHandler('workGuide');
+            },
+            contactCustomerService: function () {
+                bridge.callHandler('contactCustomerService');
             }
         }
     });

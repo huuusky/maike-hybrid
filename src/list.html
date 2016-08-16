@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>列表</title>
+    <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
+</head>
+<body>
+<div class="content lighter-gray-bg" id="content" @scroll="onScroll">
+    <div id="list-wrapper">
+        <div class="list row" v-for="item in items" @click="viewDetail(item.pubId)">
+            <div class="col col-3">
+                <img :src="item.introPic" width="65">
+            </div>
+            <div class="col col-9">
+                <p class="title">
+                    <span class="publish-time pull-right" v-text="item.gmtCreate"></span>
+                    <span v-text="item.title"></span>
+                </p>
+                <p class="address" v-text="item.provinceName + item.cityName + item.areaName"></p>
+                <p class="work-time">作业时间 <span v-text="item.peroidStart + ' - ' + item.peroidEnd"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="scripts/lib/vue.min.js"></script>
+<script src="scripts/bridge.js"></script>
+<script src="scripts/list.js"></script>
+</body>
+</html>

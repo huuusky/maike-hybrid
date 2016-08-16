@@ -4049,6 +4049,23 @@ p {
     color: #5f5f5f;
     background-color: #dbdbdb; }
 
+.list {
+  margin-top: 10px;
+  color: #a2a2a2;
+  font-size: 12px;
+  background-color: #fff; }
+  .list:active {
+    background-color: #f7f7f7; }
+  .list:first-child {
+    margin-top: 0; }
+  .list .title {
+    color: #000;
+    font-size: 14px; }
+  .list .publish-time {
+    font-size: 12px; }
+  .list .work-time {
+    margin-top: 5px; }
+
 .list-link-view {
   margin-top: 10px;
   background-color: #fff; }
