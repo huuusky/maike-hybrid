@@ -12,7 +12,7 @@ var swiper = new Swiper('.swiper-container', {
 
 setupWebViewJavascriptBridge(function(bridge) {
     var $indexVM = new Vue({
-        el: '#index',
+        el: '#content',
         data: {
             city: '定位中...'
         },

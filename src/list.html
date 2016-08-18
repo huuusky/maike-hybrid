@@ -9,7 +9,7 @@
 <body>
 <div class="content lighter-gray-bg" id="content" @scroll="onScroll">
     <div id="list-wrapper">
-        <div class="list row" v-for="item in items" @click="viewDetail(item.pubId)">
+        <div class="list row" v-for="item in list" @click="viewDetail(item.pubId)">
             <div class="col col-3">
                 <img :src="item.introPic" width="65">
             </div>

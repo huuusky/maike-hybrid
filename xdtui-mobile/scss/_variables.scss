@@ -9,7 +9,7 @@
 // Colors
 // --------------------------------------------------
 $color-primary:      #00a8ff !default;
-$color-light-red:    #ffdecf !default;
+$color-lighter-red:  #ff7979 !default;
 
 $color-white:        #fff !default;
 $color-black:        #000 !default;
@@ -121,9 +121,9 @@ $card-bg: #fff !default;
 // --------------------------------------------------
 // Each block contains the
 //             (name,          width, height,fonts-size, color, background, border).
-$buttons-list: ("primary",      100%, 40px, 17px, $color-white, $color-primary, none),
-               ("plain",        100%, 40px, 14px, $color-primary, $color-white, $border-primary),
-               ("royal",        60px, 24px, 14px, $color-primary, $color-light-red, none),
+$buttons-list: ("primary",      100%, 40px, 16px, $color-white, $color-primary, none),
+               ("plain",        100%, 40px, 16px, $color-black, $color-white, $border-default),
+               ("royal",        60px, 24px, 14px, $color-primary, $color-lighter-red, none),
                ("abandon",      60px, 24px, 14px, $color-dark-gray, $color-lighter-gray, none),
                ("tiny-plain", 65px, 20px, 12px, $color-primary, $color-white, $border-primary),
                ("tiny-info",    65px, 20px, 12px, #8bb4ff, $color-white, 1px solid #8bb4ff),
@@ -170,6 +170,10 @@ $confirm-row-height: 40px !default;
 // --------------------------------------------------
 // Customize Variables
 // --------------------------------------------------
+$remark-title-height: 30px !default;
+$remark-content-height: 40px !default;
+
+
 $shop-gutter: 10px !default;
 $shop-photo-size: 80px !default;
 $shop-extra-height: 40px !default;

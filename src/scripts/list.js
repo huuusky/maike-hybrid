@@ -1,7 +1,6 @@
 /**
  * Created by LiKun on 2016/8/15.
  */
-
 setupWebViewJavascriptBridge(function (bridge) {
     var content = document.querySelector('#content');
     var listWrapper = document.querySelector('#list-wrapper');

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>农机详情</title>
+    <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
+</head>
+<body>
+<footer class="bar bar-footer">
+    <div class="row vertical-padded-small">
+        <div class="col col-6 horizontal-padded">
+            <button class="btn btn-primary" @click="submit(detail.pubId)">提交意向</button>
+        </div>
+        <div class="col col-6 horizontal-padded">
+            <button class="btn btn-plain" @click="favour(detail.pubId)">
+                <i class="icon ion-ios-star-outline color-lighter-red"></i> 收藏
+            </button>
+        </div>
+    </div>
+</footer>
+<div class="content lighter-gray-bg">
+    <div class="detail">
+        <div class="row">
+            <div class="col col-3">农机类型</div>
+            <div class="col col-9" v-text="detail.machineType"></div>
+        </div>
+        <div class="row">
+            <div class="col col-3">农机品牌</div>
+            <div class="col col-9" v-text="detail.machineBrand"></div>
+        </div>
+        <div class="row">
+            <div class="col col-3">农机型号</div>
+            <div class="col col-9" v-text="detail.machineModel"></div>
+        </div>
+        <div class="row">
+            <div class="col col-3">机台数量</div>
+            <div class="col col-9" v-text="detail.quantity + '/台'"></div>
+        </div>
+        <div class="row">
+            <div class="col col-3">期望价格</div>
+            <div class="col col-9" v-text="detail.expectedPrice + '元'"></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="detail">
+        <div class="row">
+            <div class="col col-3">作业时间</div>
+            <div class="col col-9" v-text="detail.periodStart + ' - ' + detail.periodEnd"></div>
+        </div>
+        <div class="row">
+            <div class="col col-3">作业地址</div>
+            <div class="col col-9" v-text="detail.provinceName + detail.cityName + detail.areaName +　detail.detailedAddress"></div>
+        </div>
+    </div>
+    <div class="remark">
+        <div class="remark-title">备注</div>
+        <div class="remark-content">
+            <p v-text="detail.remark"></p>
+        </div>
+        <div class="remark-images">
+            <img :src="detail.introPic">
+        </div>
+    </div>
+</div>
+<script src="scripts/lib/vue.min.js"></script>
+<script src="scripts/bridge.js"></script>
+<script src="scripts/farm-machinery-detail.js"></script>
+</body>
+</html>

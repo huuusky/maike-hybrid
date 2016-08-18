@@ -46,9 +46,38 @@
 }
 
 // --------------------------------------------------
-// List page.
+// Detail page.
 // --------------------------------------------------
+.detail {
+    color: $color-gray;
+    background-color: $color-white;
 
+    .col-9 {
+        color: $color-black;
+        text-align: right;
+    }
+}
+
+.bar-footer {
+    height: auto;
+}
+
+.remark {
+    padding: $grid-gutter-base;
+    color: $color-gray;
+    background-color: $color-white;
+
+    .remark-title {
+        height: $remark-title-height;
+        line-height: $remark-title-height;
+        border-bottom: $border-default;
+    }
+
+    .remark-content {
+        padding: $grid-gutter-base 0;
+        min-height: $remark-content-height;
+    }
+}
 
 
 // --------------------------------------------------
