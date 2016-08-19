@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>首页</title>
-    <link rel="stylesheet" href="assets/stylesheets/swiper.css">
-    <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>首页</title>
+  <link rel="stylesheet" href="assets/stylesheets/swiper.css">
+  <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
 </head>
 <body>
 <div class="content index-content" id="content">
-    <!-- 轮播 -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
-            </div>
-            <div class="swiper-slide">
-                <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
-            </div>
-            <div class="swiper-slide">
-                <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
-            </div>
-        </div>
+  <!-- 轮播 -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/temp/carousel-01.jpg" class="img-responsive">
+      </div>
     </div>
-    <!-- 定位 -->
-    <div class="location row" @click="showCities">
-        <div class="col col-1 text-center">
-            <i class="icon ion-ios-location color-primary"></i>
-        </div>
-        <div class="col col-3" v-text="city"></div>
+  </div>
+  <!-- 定位 -->
+  <div class="location row" @click="showCities">
+    <div class="col col-1 text-center">
+      <i class="icon ion-ios-location color-primary"></i>
     </div>
-    <!-- 菜单 -->
-    <div class="menu">
-        <div class="row">
-            <div class="col col-6 padding-right">
-                <div class="menu-item" @click="findFarmWork">
-                    <div class="text-center">
-                        <img src="assets/images/index/menu-01.png" width="63">
-                        <p>找农活</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-6 padding-left">
-                <div class="menu-item"  @click="findFarmMachinery">
-                    <div class="text-center">
-                        <img src="assets/images/index/menu-02.png" width="63">
-                        <p>找农机</p>
-                    </div>
-                </div>
-            </div>
+    <div class="col col-3" v-text="city"></div>
+  </div>
+  <!-- 菜单 -->
+  <div class="menu">
+    <div class="row">
+      <div class="col col-6 padding-right">
+        <div class="menu-item" @click="findFarmWork">
+          <div class="text-center">
+            <img src="assets/images/index/menu-01.png" width="63">
+            <p>找农活</p>
+          </div>
         </div>
-        <div class="row">
-            <div class="col col-6 padding-right">
-                <div class="menu-item"  @click="workGuide">
-                    <div class="text-center">
-                        <img src="assets/images/index/menu-03.png" width="63">
-                        <p>作业指南</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-6 padding-left">
-                <div class="menu-item"  @click="contactCustomerService">
-                    <div class="text-center">
-                        <img src="assets/images/index/menu-04.png" width="63">
-                        <p>联系客服</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col col-6 padding-left">
+        <div class="menu-item" @click="findFarmMachinery">
+          <div class="text-center">
+            <img src="assets/images/index/menu-02.png" width="63">
+            <p>找农机</p>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col col-6 padding-right">
+        <div class="menu-item" @click="workGuide">
+          <div class="text-center">
+            <img src="assets/images/index/menu-03.png" width="63">
+            <p>作业指南</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-6 padding-left">
+        <div class="menu-item" @click="contactCustomerService">
+          <div class="text-center">
+            <img src="assets/images/index/menu-04.png" width="63">
+            <p>联系客服</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script src="scripts/lib/vue.min.js"></script>
 <script src="scripts/lib/swiper.min.js"></script>
