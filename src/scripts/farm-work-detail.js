@@ -18,7 +18,7 @@ setupWebViewJavascriptBridge(function (bridge) {
   });
 
   bridge.registerHandler('initDetail', function (data) {
-    $detailVM.detail = data;
+    $detailVM.detail = JSON.parse(data);
   });
 });
 
