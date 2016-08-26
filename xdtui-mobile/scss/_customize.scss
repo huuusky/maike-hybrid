@@ -81,8 +81,23 @@
 
 
 // --------------------------------------------------
-// Shop list page.
+// Discover page.
 // --------------------------------------------------
+.discover {
+  .row {
+    margin-top: $grid-gutter-base;
+    background-color: $color-white;
+
+    &:active {
+      background-color: darken($color-white, 2%);
+    }
+  }
+
+  .col {
+    line-height: 50px;
+  }
+}
+
 
 // Shop
 // --------------------------------------------------

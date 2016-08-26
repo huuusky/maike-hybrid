@@ -7,6 +7,7 @@ var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: 3000,
   autoHeight: true,
+  pagination: '.swiper-pagination',
   autoplayDisableOnInteraction: false
 });
 
