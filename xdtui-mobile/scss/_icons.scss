@@ -1,0 +1,413 @@
+//
+// Muiicons
+// --------------------------------------------------
+
+@font-face {
+  font-family: Muiicons;
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/mui.ttf') format('truetype');
+}
+
+.icon {
+  display: inline-block;
+  font-family: Muiicons;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  &.active {
+    color: $color-primary;
+  }
+  &.right {
+    &:before {
+      float: right;
+      padding-left: 0.2em;
+    }
+  }
+}
+
+// 通讯录
+// 空心部分
+.icon-contact:before {
+  content: "\e100";
+}
+
+.icon-person:before {
+  content: "\e101";
+}
+
+.icon-personadd:before {
+  content: "\e102";
+}
+
+// 实心部分
+.icon-contact-filled:before {
+  content: "\e130";
+}
+
+.icon-person-filled:before {
+  content: "\e131";
+}
+
+.icon-personadd-filled:before {
+  content: "\e132";
+}
+
+// 通讯功能
+// 空心部分
+.icon-phone:before {
+  content: "\e200";
+}
+
+.icon-email:before {
+  content: "\e201";
+}
+
+.icon-chatbubble:before {
+  content: "\e202";
+}
+
+.icon-chatboxes:before {
+  content: "\e203";
+}
+
+// 实心部分
+.icon-phone-filled:before {
+  content: "\e230";
+}
+
+.icon-email-filled:before {
+  content: "\e231";
+}
+
+.icon-chatbubble-filled:before {
+  content: "\e232";
+}
+
+.icon-chatboxes-filled:before {
+  content: "\e233";
+}
+
+// 通讯功能补充类
+.icon-weibo:before {
+  content: "\e260";
+}
+
+.icon-weixin:before {
+  content: "\e261";
+}
+
+.icon-pengyouquan:before {
+  content: "\e262";
+}
+
+.icon-chat:before {
+  content: "\e263";
+}
+
+.icon-qq:before {
+  content: "\e264";
+}
+
+// 设备类
+// 空心部分
+.icon-videocam:before {
+  content: "\e300";
+}
+
+.icon-camera:before {
+  content: "\e301";
+}
+
+.icon-mic:before {
+  content: "\e302";
+}
+
+.icon-location:before {
+  content: "\e303";
+}
+
+// 实心部分
+.icon-mic-filled:before, .icon-speech:before {
+  content: "\e332";
+}
+
+.icon-location-filled:before {
+  content: "\e333";
+}
+
+// 设备补充类
+.icon-micoff:before {
+  content: "\e360";
+}
+
+// .icon-volumehigh:before { content: "\e361"; }
+// .icon-volumelow:before { content: "\e362"; }
+.icon-image:before {
+  content: "\e363";
+}
+
+.icon-map:before {
+  content: "\e364";
+}
+
+// 操作标志类
+// 空心部分
+.icon-compose:before {
+  content: "\e400";
+}
+
+.icon-trash:before {
+  content: "\e401";
+}
+
+.icon-upload:before {
+  content: "\e402";
+}
+
+.icon-download:before {
+  content: "\e403";
+}
+
+.icon-close:before {
+  content: "\e404";
+}
+
+.icon-redo:before {
+  content: "\e405";
+}
+
+.icon-undo:before {
+  content: "\e406";
+}
+
+.icon-refresh:before {
+  content: "\e407";
+}
+
+.icon-star:before {
+  content: "\e408";
+}
+
+.icon-plus:before {
+  content: "\e409";
+}
+
+.icon-minus:before {
+  content: "\e410";
+}
+
+.icon-circle:before, .icon-checkbox:before {
+  content: "\e411";
+}
+
+// 实心部分
+.icon-close-filled:before, .icon-clear:before {
+  content: "\e434";
+}
+
+.icon-refresh-filled:before {
+  content: "\e437";
+}
+
+.icon-star-filled:before {
+  content: "\e438";
+}
+
+.icon-plus-filled:before {
+  content: "\e439";
+}
+
+.icon-minus-filled:before {
+  content: "\e440";
+}
+
+.icon-circle-filled:before {
+  content: "\e441";
+}
+
+.icon-checkbox-filled:before {
+  content: "\e442";
+}
+
+// 操作标志补充类
+.icon-closeempty:before {
+  content: "\e460";
+}
+
+.icon-refreshempty:before {
+  content: "\e461";
+}
+
+.icon-reload:before {
+  content: "\e462";
+}
+
+.icon-starhalf:before {
+  content: "\e463";
+}
+
+.icon-spinner:before {
+  content: "\e464";
+}
+
+.icon-spinner-cycle:before {
+  content: "\e465";
+}
+
+.icon-search:before {
+  content: "\e466";
+}
+
+// .icon-searchstrong:before { content: "\e467"; }
+.icon-plusempty:before {
+  content: "\e468";
+}
+
+.icon-forward:before {
+  content: "\e470";
+}
+
+.icon-back:before, .icon-left-nav:before {
+  content: "\e471";
+}
+
+.icon-checkmarkempty:before {
+  content: "\e472";
+}
+
+// .icon-share:before { content: "\e473"; }
+
+// 拟物标志类
+// 空心部分
+.icon-home:before {
+  content: "\e500";
+}
+
+.icon-navigate:before {
+  content: "\e501";
+}
+
+.icon-gear:before {
+  content: "\e502";
+}
+
+.icon-paperplane:before {
+  content: "\e503";
+}
+
+.icon-info:before {
+  content: "\e504";
+}
+
+.icon-help:before {
+  content: "\e505";
+}
+
+.icon-locked:before {
+  content: "\e506";
+}
+
+.icon-more:before {
+  content: "\e507";
+}
+
+.icon-flag:before {
+  content: "\e508";
+}
+
+// 实心部分
+.icon-home-filled:before {
+  content: "\e530";
+}
+
+.icon-gear-filled:before {
+  content: "\e532";
+}
+
+.icon-info-filled:before {
+  content: "\e534";
+}
+
+.icon-help-filled:before {
+  content: "\e535";
+}
+
+.icon-more-filled:before {
+  content: "\e537";
+}
+
+// 拟物标志补充类
+.icon-settings:before {
+  content: "\e560";
+}
+
+// .icon-settingsstrong:before { content: "\e561"; }
+.icon-list:before {
+  content: "\e562";
+}
+
+.icon-bars:before {
+  content: "\e563";
+}
+
+// .icon-more-vertical:before { content: "\e564"; }
+.icon-loop:before {
+  content: "\e565";
+}
+
+// .icon-loopstrong:before { content: "\e566"; }
+.icon-paperclip:before {
+  content: "\e567";
+}
+
+.icon-eye:before {
+  content: "\e568";
+}
+
+// 箭头
+.icon-arrowup:before {
+  content: "\e580";
+}
+
+.icon-arrowdown:before {
+  content: "\e581";
+}
+
+.icon-arrowleft:before {
+  content: "\e582";
+}
+
+.icon-arrowright:before {
+  content: "\e583";
+}
+
+.icon-arrowthinup:before {
+  content: "\e584";
+}
+
+.icon-arrowthindown:before {
+  content: "\e585";
+}
+
+.icon-arrowthinleft:before {
+  content: "\e586";
+}
+
+.icon-arrowthinright:before {
+  content: "\e587";
+}
+
+.icon-pulldown:before {
+  content: "\e588";
+}
+
+
+
+
+
+
+
