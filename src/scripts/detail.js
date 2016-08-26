@@ -1,5 +1,5 @@
 /**
- * Created by LiKun on 2016/8/17.
+ * 农活、农机详情
  */
 setupWebViewJavascriptBridge(function (bridge) {
   var $detailVM = new Vue({

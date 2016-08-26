@@ -1,5 +1,5 @@
 /**
- * Created by LiKun on 2016/8/10.
+ * 首页
  */
 var swiper = new Swiper('.swiper-container', {
   // Optional parameters

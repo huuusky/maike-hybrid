@@ -6,79 +6,81 @@
 // Index page.
 // --------------------------------------------------
 .index-content {
-    background: url("../images/index/index-bg.jpg") bottom center no-repeat;
-    background-size: 100% auto;
+  background: url("../images/index/index-bg.jpg") bottom center no-repeat;
+  background-size: 100% auto;
 }
 
 .ad {
-    margin-top: $grid-gutter-base * 2;
+  margin-top: $grid-gutter-base * 2;
 }
 
 .service {
-    margin-top: $grid-gutter-base * 2;
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  margin-top: $grid-gutter-base * 2;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
-.service-list {
-    width: 1000px;
-    height: 80px;
-    @include clearfix();
-}
-.service-item {
-    float: left;
-    margin-left: 30px;
-    width: 60px;
-    color: $color-white;
 
-    &:first-child {
-        margin-left: 0;
-    }
+.service-list {
+  width: 1000px;
+  height: 80px;
+  @include clearfix();
+}
+
+.service-item {
+  float: left;
+  margin-left: 30px;
+  width: 60px;
+  color: $color-white;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .location {
-    font-size: 15px;
-    line-height: 26px;
-
-    .icon {
-        font-size: 22px;
-    }
+  font-size: 15px;
+  line-height: 26px;
 }
 
 // --------------------------------------------------
 // Detail page.
 // --------------------------------------------------
 .detail {
-    color: $color-gray;
-    background-color: $color-white;
+  color: $color-gray;
+  background-color: $color-white;
 
-    .col-9 {
-        color: $color-black;
-        text-align: right;
-    }
+  .col-9 {
+    color: $color-black;
+    text-align: right;
+  }
+
+  .price {
+    font-size: 25px;
+    color: $color-primary;
+  }
 }
 
 .bar-footer {
-    height: auto;
+  height: auto;
 }
 
 .remark {
-    padding: $grid-gutter-base;
-    color: $color-gray;
-    background-color: $color-white;
+  padding: $grid-gutter-base;
+  color: $color-gray;
+  background-color: $color-white;
 
-    .remark-title {
-        height: $remark-title-height;
-        line-height: $remark-title-height;
-        border-bottom: $border-default;
-    }
+  .remark-title {
+    height: $remark-title-height;
+    line-height: $remark-title-height;
+    border-bottom: $border-default;
+  }
 
-    .remark-content {
-        padding: $grid-gutter-base 0;
-        min-height: $remark-content-height;
-    }
+  .remark-content {
+    padding: $grid-gutter-base 0;
+    min-height: $remark-content-height;
+  }
 }
-
 
 // --------------------------------------------------
 // Discover page.
@@ -97,7 +99,6 @@
     line-height: 50px;
   }
 }
-
 
 // Shop
 // --------------------------------------------------
@@ -618,7 +619,8 @@
   border: {
     top: 5px solid $color-primary;
     bottom: 5px solid $color-primary;
-  };
+  }
+;
   border-radius: $border-radius-large;
 
   &.disabled {
@@ -626,7 +628,8 @@
     border: {
       top: 5px solid $color-gray;
       bottom: 5px solid $color-gray;
-    };
+    }
+  ;
   }
 }
 
@@ -634,7 +637,8 @@
   border: {
     left: $border-default;
     right: $border-default;
-  };
+  }
+;
 }
 
 .expiry-date {

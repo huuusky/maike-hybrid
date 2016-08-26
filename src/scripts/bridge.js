@@ -1,5 +1,5 @@
 /**
- * Created by LiKun on 2016/8/11.
+ * 初始化JS Bridge
  */
 function setupWebViewJavascriptBridge(callback) {
   if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }

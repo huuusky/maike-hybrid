@@ -1695,8 +1695,6 @@ p {
 .location {
   font-size: 15px;
   line-height: 26px; }
-  .location .icon {
-    font-size: 22px; }
 
 .detail {
   color: #a2a2a2;
@@ -1704,6 +1702,9 @@ p {
   .detail .col-9 {
     color: #000;
     text-align: right; }
+  .detail .price {
+    font-size: 25px;
+    color: #00a8ff; }
 
 .bar-footer {
   height: auto; }
