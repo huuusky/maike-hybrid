@@ -3,7 +3,6 @@
  */
 var swiper = new Swiper('.swiper-container', {
   // Optional parameters
-  effect: 'slide',
   loop: true,
   autoplay: 3000,
   autoHeight: true,
@@ -13,14 +12,9 @@ var swiper = new Swiper('.swiper-container', {
 
 setupWebViewJavascriptBridge(function (bridge) {
   var $indexVM = new Vue({
-    el: '#content',
-    data: {
-      city: '定位中...'
-    },
+    el: 'body',
+    data: {},
     methods: {
-      showCities: function () {
-        bridge.callHandler('showCities');
-      },
       findFarmWork: function () {
         bridge.callHandler('findFarmWork');
       },
@@ -32,11 +26,19 @@ setupWebViewJavascriptBridge(function (bridge) {
       },
       contactCustomerService: function () {
         bridge.callHandler('contactCustomerService');
+      },
+      viewDetail: function (id, publishType) {
+        console.log(id, publishType);
+        bridge.callHandler('viewDetail', {id: id, publishType: publishType});
+      },
+      viewMore: function () {
+        this.more === 'work' ?  this.findFarmWork() : this.findFarmMachinery();
       }
     }
   });
 
-  bridge.registerHandler('updateLocation', function (city) {
-    $indexVM.city = city;
+  bridge.registerHandler('init', function (data) {
+    $indexVM.data = JSON.parse(data);
   });
 });
+

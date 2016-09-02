@@ -123,7 +123,7 @@ $card-bg: #fff !default;
 //             (name,          width, height,fonts-size, color, background, border).
 $buttons-list: ("primary",      100%, 40px, 16px, $color-white, $color-primary, none),
                ("plain",        100%, 40px, 16px, $color-black, $color-white, $border-default),
-               ("royal",        60px, 24px, 14px, $color-primary, $color-lighter-red, none),
+               ("royal",        60px, 24px, 14px, $color-white, $color-primary, none),
                ("abandon",      60px, 24px, 14px, $color-dark-gray, $color-lighter-gray, none),
                ("tiny-plain", 65px, 20px, 12px, $color-primary, $color-white, $border-primary),
                ("tiny-info",    65px, 20px, 12px, #8bb4ff, $color-white, 1px solid #8bb4ff),
@@ -137,8 +137,7 @@ $list-gutter:      10px !default;
 
 // Menu
 // --------------------------------------------------
-$menu-width: 135px !default;
-$menu-height: 120px !default;
+$menu-height: 110px !default;
 $menu-bg: rgba(255, 255, 255, .6) !default;
 $menu-active-bg: rgba(230, 230, 230, .6) !default;
 
@@ -201,8 +200,9 @@ $timeline-btn-height: 50px !default;
 $appoint-time-row-height: 40px !default;
 $appoint-time-list-height: $appoint-time-row-height * 5 !default;
 
-$coupon-list-height: 200px !default;
-$coupon-gutter: 10px !default;
+$coupon-list-min-height: 110px !default;
+$coupon-list-max-height: 242px !default;
+$coupon-height: 74px !default;
 
 $appoint-item-col-padding: 25px !default;
 $car-condition-report-height: 88px !default;

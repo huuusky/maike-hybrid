@@ -10,8 +10,8 @@
 <div class="content lighter-gray-bg">
   <div class="detail">
     <div class="row vertical-padded-large text-center">
-      <div class="col col-12 vertical-padded-small">
-        <span class="price" v-if="detail.state > 3" v-text="'￥' + detail.expectedPrice"></span>
+      <div class="col col-12 vertical-padded-small" v-if="detail.state > 3 && detail.state < 9">
+        <span class="price" v-text="'￥' + detail.deposit"></span>
       </div>
       <div class="col col-12 vertical-padded-small" v-text="'订单编号：' + detail.orderNo"></div>
     </div>
@@ -43,7 +43,7 @@
     </div>
     <div class="row" v-if="detail.state > 3 && detail.state < 9">
       <div class="col col-3">作业地址</div>
-      <div class="col col-9" v-text="detail.provinceName + detail.cityName + detail.areaName"></div>
+      <div class="col col-9" v-text="address"></div>
     </div>
   </div>
   <div class="remark">
@@ -53,6 +53,28 @@
     </div>
     <div class="remark-images">
       <img :src="detail.introPic">
+    </div>
+  </div>
+</div>
+<!-- 优惠券 -->
+<div class="modal coupon-modal" id="coupon-modal">
+  <div class="modal-backdrop" @click="hideCoupons()"></div>
+  <div class="modal-content coupon-modal-content">
+    <div class="coupon-list" v-if="detail.coupons.length > 0">
+      <div class="coupon" v-for="coupon in detail.coupons" @click="selectCoupon($index, coupon.couponId, coupon.amount)">
+        <div class="row vertical-padded-small">
+          <div class="col col-6 vertical-padded-small" v-text="coupon.title"></div>
+          <div class="col col-6 vertical-padded-small text-right">¥<span v-text="coupon.amount"></span></div>
+          <div class="col col-6 col-offset-6 vertical-padded-small text-right">有效期至<span v-text="coupon.expiredDate"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="coupon-list" v-else>
+      <div class="no-coupon-tip">您当前无可用优惠券</div>
+    </div>
+    <div class="modal-btn-group">
+      <button class="btn btn-royal inline" id="coupon-confirm-btn" @click="hideCoupons()">确 定</button>
+      <button class="btn btn-abandon inline" id="coupon-cancel-btn" @click="cancel()">取 消</button>
     </div>
   </div>
 </div>

@@ -86,16 +86,22 @@
   position: fixed;
 }
 
-// Orange red color
+// Primary color
 // --------------------------------------------------
 .color-primary {
   color: $color-primary;
 }
 
-// Orange red color
+// Lighter red color
 // --------------------------------------------------
 .color-lighter-red {
     color: $color-lighter-red;
+}
+
+// Gray color
+// --------------------------------------------------
+.color-gray {
+  color: $color-gray;
 }
 
 // Full fill the parent container

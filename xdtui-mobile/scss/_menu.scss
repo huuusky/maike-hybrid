@@ -5,20 +5,17 @@
 // Normal menu
 // --------------------------------------------------
 .menu {
+  .menu-item {
+    margin: 0 auto;
+    height: $menu-height;
+    @include flex-center-middle-layout;
+    background-color: $menu-bg;
+  }
+
+  .menu-label {
     margin-top: $grid-gutter-base;
+  }
 
-    .menu-item {
-        margin: 0 auto;
-        width: $menu-width;
-        height: $menu-height;
-        @include flex-center-middle-layout;
-        background-color: $menu-bg;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
-
-        &:active {
-            background-color: $menu-active-bg;
-        }
-    }
 }
 
 

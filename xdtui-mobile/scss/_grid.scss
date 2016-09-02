@@ -35,6 +35,10 @@
     };
   }
 
+  &.margin-top {
+    margin-top: $grid-gutter-base;
+  }
+
   &.no-padding {
     padding: 0;
   }
