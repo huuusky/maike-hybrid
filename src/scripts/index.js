@@ -13,7 +13,10 @@ var swiper = new Swiper('.swiper-container', {
 setupWebViewJavascriptBridge(function (bridge) {
   var $indexVM = new Vue({
     el: 'body',
-    data: {},
+    data: {
+      recommend: [],
+      more: ''
+    },
     methods: {
       findFarmWork: function () {
         bridge.callHandler('findFarmWork');
@@ -28,7 +31,6 @@ setupWebViewJavascriptBridge(function (bridge) {
         bridge.callHandler('contactCustomerService');
       },
       viewDetail: function (id, publishType) {
-        console.log(id, publishType);
         bridge.callHandler('viewDetail', {id: id, publishType: publishType});
       },
       viewMore: function () {
@@ -38,7 +40,9 @@ setupWebViewJavascriptBridge(function (bridge) {
   });
 
   bridge.registerHandler('init', function (data) {
-    $indexVM.data = JSON.parse(data);
+    var indexJson = JSON.parse(data);
+    $indexVM.recommend = indexJson.recommend;
+    $indexVM.more = indexJson.more;
   });
 });
 

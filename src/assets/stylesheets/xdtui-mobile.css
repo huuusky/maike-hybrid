@@ -1697,6 +1697,26 @@ p {
     .operation-manual .describe p {
       font-size: 12px; }
 
+.message {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px; }
+  .message:active {
+    background-color: #fafafa; }
+
+.message-title {
+  padding-top: 10px;
+  padding-bottom: 0; }
+
+.message-content,
+.message-date {
+  color: #a2a2a2;
+  font-size: 12px; }
+
+.message-date {
+  border-top: 1px solid #dbdbdb; }
+
 .coupon-modal .coupon {
   margin-top: 10px;
   height: 74px;

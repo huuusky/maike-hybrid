@@ -122,9 +122,35 @@
 }
 
 // --------------------------------------------------
-// Order page
+// Message page
 // --------------------------------------------------
+.message {
+  margin-top: $grid-gutter-base;
+  background-color: $color-white;
+  border: $border-default;
+  border-radius: $border-radius-base;
 
+  &:active {
+    background-color: darken($color-white, 2%);
+  }
+}
+
+.message-title {
+  padding: {
+    top: 10px;
+    bottom: 0;
+  };
+}
+
+.message-content,
+.message-date {
+  color: $color-gray;
+  font-size: $font-size-small;
+}
+
+.message-date {
+  border-top: $border-default;
+}
 
 // --------------------------------------------------
 // Coupon
