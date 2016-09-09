@@ -10,6 +10,12 @@ var swiper = new Swiper('.swiper-container', {
   autoplayDisableOnInteraction: false
 });
 
+var swiperContainerHeight = document.querySelector('.swiper-container').scrollHeight;
+var menuHeight = document.querySelector('.menu').scrollHeight;
+var grayTitleHeight = document.querySelector('.gray-title').scrollHeight;
+console.log('calc(100%-' + (swiperContainerHeight + menuHeight + grayTitleHeight) + 'px)');
+document.querySelector('.recommend').style.height = 'calc(100% - ' + (swiperContainerHeight + menuHeight + grayTitleHeight) + 'px)';
+
 setupWebViewJavascriptBridge(function (bridge) {
   var $indexVM = new Vue({
     el: 'body',

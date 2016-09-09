@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -59,8 +59,8 @@
     </div>
   </div>
   <!-- 今日推荐 -->
+  <div class="gray-title">今日推荐</div>
   <div class="recommend">
-    <div class="gray-title"><span class="recommend-more" @click="viewMore">更多</span>今日推荐</div>
     <div class="list row" v-for="item in recommend" @click="viewDetail(item.pubId, item.publishType)">
       <div class="col col-3">
         <img :src="item.introPic || 'assets/images/temp/list-01.jpg'" width="65">

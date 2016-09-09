@@ -16,6 +16,9 @@
 }
 */
 .recommend {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
   .recommend-more {
     display: inline-block;
     float: right;

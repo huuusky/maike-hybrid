@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,7 +10,8 @@
 <footer class="bar bar-footer padded" v-if="detail.state === 2 || detail.state === 3 || detail.state === 5">
   <button class="btn btn-primary" v-if="detail.state === 2" @click="confirm">确 认</button>
   <button class="btn btn-primary" v-if="detail.state === 3" @click="pay">去 付 款</button>
-  <button class="btn btn-primary" v-if="detail.state === 5" @click="done">完 成</button>
+  <button class="btn btn-primary" v-if="detail.state === 4" @click="done">服 务 完 成</button>
+  <button class="btn btn-primary" v-if="detail.state === 5" @click="feedback">去 评 价</button>
 </footer>
 <div class="content">
   <div class="detail">
@@ -26,7 +27,7 @@
     <!-- 保证金和优惠券，订单状态介于服务中和已退款时显示，即 3 < state < 9 -->
     <div class="list-link-view no-gutter" v-if="detail.state > 2 && detail.state < 9">
       <div class="link-list-item no-border-bottom" @click="showCoupons">
-        <div class="link-list-title">保证金：<span v-text="detail.deposit"></span>元</div>
+        <div class="link-list-title">优惠券可用于抵扣佣金</div>
         <div class="link-list-desc">优惠券减<span v-model="selectedCouponValue" v-text="selectedCouponValue"></span>元</div>
         <i class="list-forward icon icon-forward"></i>
       </div>

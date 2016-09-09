@@ -6,7 +6,7 @@ setupWebViewJavascriptBridge(function (bridge) {
     el: 'body',
     data: {
       couponModel: document.querySelector('#coupon-modal'),
-      selectedCouponId: 0, // 选中的优惠券ID
+      selectedCouponId: null, // 选中的优惠券ID
       selectedCouponValue: 0, // 选中的优惠券面额
       detail: {}
     },
@@ -34,10 +34,13 @@ setupWebViewJavascriptBridge(function (bridge) {
         bridge.callHandler('confirm', {orderId: this.detail.orderId, taskId: this.detail.taskId});
       },
       pay: function () {
-        bridge.callHandler('pay', {orderId: this.detail.orderId, taskId: this.detail.taskId});
+        bridge.callHandler('pay', {orderId: this.detail.orderId, taskId: this.detail.taskId, couponId: this.selectedCouponId});
       },
       done: function () {
         bridge.callHandler('done', {orderId: this.detail.orderId, taskId: this.detail.taskId});
+      },
+      feedback: function () {
+        bridge.callHandler('feedback', {orderId: this.detail.orderId, taskId: this.detail.taskId});
       }
     }
   });
