@@ -18,17 +18,12 @@
 .recommend {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-
-  .recommend-more {
-    display: inline-block;
-    float: right;
-    width: 60px;
-    height: 100%;
-    color: $color-gray;
-    text-align: right;
-  }
 }
 
+.recommend-load-tip {
+  margin-top: 100px;
+  text-align: center;
+}
 
 // --------------------------------------------------
 // Detail page.
@@ -102,27 +97,53 @@
 
 // --------------------------------------------------
 // Operation manual page
+// Registration agreement page
 // --------------------------------------------------
-.operation-manual {
-  color: $color-black;
+.text-block {
+  padding: $grid-gutter-large 0;
+  border-bottom: $border-dashed;
 
-  .operation-manual-item {
-    padding: $grid-gutter-large 0;
-    border-bottom: $border-dashed;
-
-    &:last-child {
-      border-bottom: none;
-    }
+  &:last-child {
+    border-bottom: none;
   }
 
   .describe {
     padding-left: 1em;
+  }
 
-    p {
-      font-size: $font-size-small;
-    }
+  p {
+    font-size: $font-size-small;
   }
 }
+
+// --------------------------------------------------
+// Register page
+// --------------------------------------------------
+.register {
+  // iPhone 5
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px){
+    padding-top: 140px;
+  }
+  // iPhone 6
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px){
+    padding-top: 160px;
+  }
+  // iPhone 6 Plus
+  @media only screen
+  and (min-device-width : 414px)
+  and (max-device-width : 736px){
+    padding-top: 180px;
+  }
+
+  background: url("../images/register/top-bg.png") center top no-repeat,
+              url("../images/register/bottom-bg.png") center bottom no-repeat;
+  background-size: 100%;
+}
+
 
 // --------------------------------------------------
 // Message page
@@ -206,78 +227,4 @@
   max-height: $coupon-list-max-height;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-// --------------------------------------------------
-// Order pay
-// --------------------------------------------------
-.pay-order-info {
-  padding: 0 $grid-gutter-base;
-
-  .row {
-    border-top: $border-default;
-
-    &:first-child {
-      font-weight: $font-weight-heavier;
-      border-top: none;
-    }
-  }
-}
-
-.pay-countdown {
-  font-size: $font-size-small;
-  text-align: center;
-}
-
-.pay-countdown-text {
-  vertical-align: middle;
-}
-
-.payment {
-  padding: 0 $grid-gutter-base;
-  margin-top: 100px;
-}
-
-// --------------------------------------------------
-// Order list page
-// --------------------------------------------------
-.order-type {
-  height: $order-list-type-height;
-  line-height: $order-list-type-height;
-
-  &:active {
-    color: $color-primary;
-    background-color: darken($color-white, 5%);
-  }
-
-  &.active {
-    color: $color-primary;
-    border-bottom: 2px solid $color-primary;
-  }
-}
-
-.order {
-  padding: 0 $grid-gutter-base;
-  margin-top: $grid-gutter-base;
-  background-color: $color-white;
-  border: $border-default;
-  border-radius: $border-radius-base;
-
-  .order-number,
-  .order-submit-time {
-    color: $color-gray;
-  }
-
-  .order-header,
-  .order-content {
-    border-bottom: $border-default;
-  }
-
-  .order-content {
-    padding: $grid-gutter-base 0;
-  }
-
-  .btn {
-    margin-left: $grid-gutter-base;
-  }
 }

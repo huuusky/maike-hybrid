@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
 </head>
 <body>
-<div class="content lighter-gray-bg padded" id="content">
+<div class="content lighter-gray-bg padded">
   <div class="discover">
-    <div class="row">
+    <div class="row" @click="open('条款说明', 'registration-agreement.html')">
       <div class="col col-3"><img src="assets/images/about/about-icon-01.png" width="45"></div>
       <div class="col col-9">条款说明</div>
     </div>
-    <div class="row">
+    <!--<div class="row" @click="open('法律相关', '')">
       <div class="col col-3"><img src="assets/images/about/about-icon-02.png" width="45"></div>
       <div class="col col-9">法律相关</div>
-    </div>
-    <div class="row">
+    </div>-->
+    <div class="row" @click="open('关于麦客', 'about-maike.html')">
       <div class="col col-3"><img src="assets/images/about/about-icon-03.png" width="45"></div>
       <div class="col col-9">关于麦客</div>
     </div>
     </div>
   </div>
 </div>
+<script src="scripts/lib/vue.min.js"></script>
+<script src="scripts/bridge.js"></script>
+<script src="scripts/open.js"></script>
 </body>
 </html>

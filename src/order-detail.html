@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
 </head>
 <body>
-<footer class="bar bar-footer padded" v-if="detail.state === 2 || detail.state === 3 || detail.state === 5">
+<footer class="bar bar-footer padded" v-if="detail.state > 1 && detail.state < 6">
   <button class="btn btn-primary" v-if="detail.state === 2" @click="confirm">确 认</button>
   <button class="btn btn-primary" v-if="detail.state === 3" @click="pay">去 付 款</button>
   <button class="btn btn-primary" v-if="detail.state === 4" @click="done">服 务 完 成</button>

@@ -17,14 +17,15 @@ var autoprefixer = require('gulp-autoprefixer');
 // Values: nested, expanded, compact, compressed
 // Default: nested
 gulp.task('sass', function () {
-  gulp.src('xdtui-mobile/icons/xdtui-mobile.icons')
+  gulp.src('./xdtui-mobile/scss/xdtui-mobile.scss')
     .pipe(sourceMaps.init())
     .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-    .pipe(sourceMaps.write())
+    .pipe(autoprefixer({
+      browsers: ['Android >= 4.0', 'iOS >= 7.0'],
+      cascade: true //是否美化属性值
+    }))
+    .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest('./src/assets/stylesheets'));
-    /*.pipe(cleanCSS())
-   .pipe(rename({ extname: '.min.stylesheets' }))
-   .pipe(gulp.dest('./dist/assets/stylesheets'));*/
 });
 
 gulp.task('build:html', function () {

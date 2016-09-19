@@ -61,19 +61,29 @@
   <!-- 今日推荐 -->
   <div class="gray-title">今日推荐</div>
   <div class="recommend">
-    <div class="list row" v-for="item in recommend" @click="viewDetail(item.pubId, item.publishType)">
-      <div class="col col-3">
-        <img :src="item.introPic || 'assets/images/temp/list-01.jpg'" width="65">
-      </div>
-      <div class="col col-9">
-        <p class="title">
-          <span class="publish-time pull-right" v-text="item.publishDate"></span>
-          <span v-text="item.title"></span>
-        </p>
-        <p class="address" v-text="item.address"></p>
-        <p class="work-time">作业时间 <span v-text="item.workPeriod"></span></p>
-      </div>
+    <div class="recommend-load-tip" v-if="isError">
+      <p @click="reload">加载失败，是否<span class="color-primary">重新加载</span>?</p>
     </div>
+    <template v-else>
+      <template v-if="recommend.length >　0">
+        <div class="list row" v-for="item in recommend" @click="viewDetail(item.pubId, item.publishType)">
+          <div class="col col-3">
+            <img :src="item.introPic || 'assets/images/temp/list-01.jpg'" width="65">
+          </div>
+          <div class="col col-9">
+            <p class="title">
+              <span class="publish-time pull-right" v-text="item.publishDate"></span>
+              <span v-text="item.title"></span>
+            </p>
+            <p class="address" v-text="item.address"></p>
+            <p class="work-time">作业时间 <span v-text="item.workPeriod"></span></p>
+          </div>
+        </div>
+      </template>
+      <div class="recommend-load-tip" v-else>
+        <i class="icon icon-spinner color-primary"></i> 加载中...
+      </div>
+    </template>
   </div>
 </div>
 <script src="scripts/lib/vue.min.js"></script>
