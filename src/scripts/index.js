@@ -20,7 +20,7 @@ setupWebViewJavascriptBridge(function (bridge) {
   var $indexVM = new Vue({
     el: 'body',
     data: {
-      recommend: [],
+      recommend: null,
       isError: false
     },
     methods: {

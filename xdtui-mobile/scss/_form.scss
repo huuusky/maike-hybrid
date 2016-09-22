@@ -20,7 +20,8 @@
 
 .form-input {
   width: 100%;
-  line-height: $line-height-small;
+  height: 40px;
+  line-height: $line-height-base;
   color: inherit;
   outline: none;
   text-indent: $grid-gutter-base;

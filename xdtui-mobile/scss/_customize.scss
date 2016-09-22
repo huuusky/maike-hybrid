@@ -120,6 +120,8 @@
 // Register page
 // --------------------------------------------------
 .register {
+  padding: 0 $grid-gutter-large;
+
   // iPhone 5
   @media only screen
   and (min-device-width : 320px)
@@ -144,7 +146,57 @@
   background-size: 100%;
 }
 
+.unregistered {
+  padding: 0 $grid-gutter-base;
 
+  .invitation-text {
+    position: relative;
+    padding: $grid-gutter-base / 2 0;
+    margin-top: $grid-gutter-large;
+    text-align: center;
+    background-color: $color-white;
+    border: $border-default;
+    border-radius: $border-radius-base;
+
+    p {
+      position: relative;
+      z-index: 55;
+      &:last-child {
+        font-size: $font-size-large;
+        line-height: 1.5;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      z-index: 45;
+      top: -10px;
+      left: calc(50% - 14px);
+      width: 20px;
+      height: 20px;
+      content: "";
+      transform: rotateZ(45deg);
+      border-top: $border-default;
+      border-left: $border-default;
+      background-color: $color-white;
+    }
+  }
+
+  .register-form {
+    margin-top: $grid-gutter-large;
+  }
+
+  .activity-description {
+    padding: 10px;
+    margin: $grid-gutter-base -10px;
+    border-top: $border-default;
+  }
+}
+
+.registrant-name {
+  margin-top: 26px;
+  font-size: $font-size-large;
+}
 // --------------------------------------------------
 // Message page
 // --------------------------------------------------
@@ -179,8 +231,40 @@
 // --------------------------------------------------
 // Coupon
 // --------------------------------------------------
-.coupon-modal {
+.coupon {
+  margin-top: $grid-gutter-large;
+  color: $color-primary;
+  /*background: #fff url("../images/register/coupon-bg.png") right center no-repeat;
+  background-size: 223px 111px;*/
+  background: $color-white;
+  border: {
+    top: 5px solid $color-primary;
+    bottom: 5px solid $color-primary;
+  };
+  border-radius: $border-radius-large;
 
+  &.disabled {
+    color: $color-gray;
+    border: {
+      top: 5px solid $color-gray;
+      bottom: 5px solid $color-gray;
+    };
+  }
+}
+
+.coupon-content {
+  border: {
+    left: $border-default;
+    right: $border-default;
+  };
+}
+
+.expiry-date {
+  color: $color-gray;
+  border-top: $border-default;
+}
+
+.coupon-modal {
   .coupon {
     margin-top: $grid-gutter-base;
     height: $coupon-height;

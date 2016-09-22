@@ -61,10 +61,17 @@
   <!-- 今日推荐 -->
   <div class="gray-title">今日推荐</div>
   <div class="recommend">
-    <div class="recommend-load-tip" v-if="isError">
-      <p @click="reload">加载失败，是否<span class="color-primary">重新加载</span>?</p>
-    </div>
+    <template v-if="isError">
+      <div class="recommend-load-tip" >
+        <p @click="reload">加载失败，是否<span class="color-primary">重新加载</span>?</p>
+      </div>
+    </template>
     <template v-else>
+      <template v-if="recommend == null">
+        <div class="recommend-load-tip">
+          <i class="icon icon-spinner color-primary"></i> 加载中...
+        </div>
+      </template>
       <template v-if="recommend.length >　0">
         <div class="list row" v-for="item in recommend" @click="viewDetail(item.pubId, item.publishType)">
           <div class="col col-3">
@@ -80,9 +87,11 @@
           </div>
         </div>
       </template>
-      <div class="recommend-load-tip" v-else>
-        <i class="icon icon-spinner color-primary"></i> 加载中...
-      </div>
+      <template v-else>
+        <div class="recommend-load-tip">
+          无推荐
+        </div>
+      </template>
     </template>
   </div>
 </div>

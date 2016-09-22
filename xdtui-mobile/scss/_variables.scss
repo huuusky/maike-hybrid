@@ -123,6 +123,7 @@ $card-bg: #fff !default;
 //             (name,          width, height,fonts-size, color, background, border).
 $buttons-list: ("primary",      100%, 40px, 16px, $color-white, $color-primary, none),
                ("plain",        100%, 40px, 16px, $color-black, $color-white, $border-default),
+               ("plain-primary",100%, 40px, 14px, $color-primary, $color-white, $border-primary),
                ("royal",        60px, 24px, 14px, $color-white, $color-primary, none),
                ("abandon",      60px, 24px, 14px, $color-dark-gray, $color-lighter-gray, none),
                ("tiny-plain", 65px, 20px, 12px, $color-primary, $color-white, $border-primary),

@@ -9,27 +9,29 @@
 <body>
 <div class="content lighter-gray-bg padded">
   <div class="discover">
-    <div class="row">
+    <div class="row" @click="open('物流服务', '')">
       <div class="col col-3"><img src="assets/images/discover/discover-01.png" width="45"></div>
       <div class="col col-9">物流服务</div>
     </div>
-    <div class="row">
+    <div class="row" @click="open('金融服务', '')">
       <div class="col col-3"><img src="assets/images/discover/discover-02.png" width="45"></div>
       <div class="col col-9">金融服务</div>
     </div>
-    <div class="row">
+    <div class="row" @click="open('维修服务', '')">
       <div class="col col-3"><img src="assets/images/discover/discover-05.png" width="45"></div>
       <div class="col col-9">维修服务</div>
     </div>
-    <div class="row">
+    <div class="row" @click="open('农机操作手册', '')">
       <div class="col col-3"><img src="assets/images/discover/discover-03.png" width="45"></div>
       <div class="col col-9">农机操作手册</div>
     </div>
-    <div class="row">
+    <div class="row" @click="open('法律援助', '')">
       <div class="col col-3"><img src="assets/images/discover/discover-04.png" width="45"></div>
       <div class="col col-9">法律援助</div>
     </div>
   </div>
 </div>
+<script src="scripts/lib/vue.min.js"></script>
+<script src="scripts/open.js"></script>
 </body>
 </html>
