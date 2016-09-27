@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>下载</title>
+  <link rel="stylesheet" href="assets/stylesheets/xdtui-mobile.css">
+</head>
+<body>
+<div class="row hide" id="iPhone-tip">
+  <p class="text-right">
+    <img src="assets/images/temp/share-line.png" height="100">
+  </p>
+  <p class="text-center">戳右上角，选择“<span class="color-primary">在Safari中打开</span>”即可下载。</p>
+</div>
+<script>
+  var ua = navigator.userAgent.toLowerCase();
+
+  // Android
+  if (/android/.test(ua)) {
+    console.log('android');
+    location.replace('http://a.app.qq.com/o/simple.jsp?pkgname=com.china.maike');
+  }
+
+  // iPhone
+  if (/iphone/.test(ua)) {
+    document.write('<div class="row"><p class="text-center color-primary">暂未上架</p></div>');
+    /*// 微信浏览器
+    if (/micromessenger/.test(ua)) {
+      document.querySelector('#iPhone-tip').className = 'row show';
+    } else {
+      location.replace('https://itunes.apple.com/us/app/xing-de-tong/id1055263492');
+    }*/
+  }
+</script>
+</body>
+</html>

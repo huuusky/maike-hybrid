@@ -14,3 +14,4 @@ setupWebViewJavascriptBridge(function (bridge) {
     }
   })
 });
+
