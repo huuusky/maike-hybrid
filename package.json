@@ -4,7 +4,7 @@
   "description": "The H5 pages for Maike app.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp default"
   },
   "keywords": [
     "麦客中国"

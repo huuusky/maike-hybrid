@@ -4,7 +4,7 @@
 "use strict";
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var rename = require("gulp-rename");
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');

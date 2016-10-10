@@ -36,6 +36,9 @@ setupWebViewJavascriptBridge(function (bridge) {
       contactCustomerService: function () {
         bridge.callHandler('contactCustomerService');
       },
+      farmProduce: function () {
+        bridge.callHandler('farmProduce');
+      },
       viewDetail: function (id, publishType) {
         bridge.callHandler('viewDetail', {id: id, publishType: publishType});
       },
